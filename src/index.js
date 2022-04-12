@@ -60,3 +60,19 @@ contact.querySelector("h4").textContent = siteContent.contact['contact-h4']
 contact.children[1].textContent = siteContent.contact['address']
 contact.children[2].textContent = siteContent.contact['phone']
 contact.children[3].textContent = siteContent.contact['email']
+
+//images
+
+const logoImage = document.querySelector('#logo-img');
+logoImage.src = siteContent['images']['logo-img']
+
+const img2 = document.querySelector("#cta-img")
+img2.src = siteContent['images']['cta-img']
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['images']['accent-img']
+
+// footer
+
+const footer = document.querySelector('footer a')
+footer.textContent = siteContent['footer']['copyright']
