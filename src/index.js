@@ -40,3 +40,23 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// Nav links
+const navLinks = document.querySelectorAll('header nav a ')
+const navLinksTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinksTexts[idx]
+  link.classList.add('italic')
+})
+
+// cta
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+// contact
+
+const contact = document.querySelector("section.contact");
+contact.querySelector("h4").textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
