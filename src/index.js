@@ -41,6 +41,25 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 console.log('project wired!')
 
+//main content
+
+const topContent = document.querySelector('.top-content');
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+//bottom content
+const bottomContent = document.querySelector('.bottom-content')
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content']
+
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4']
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content']
+
+
+
+
 // Nav links
 const navLinks = document.querySelectorAll('header nav a ')
 const navLinksTexts = Object.values(siteContent.nav)
@@ -71,6 +90,7 @@ img2.src = siteContent['images']['cta-img']
 
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['images']['accent-img']
+
 
 // footer
 
